@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{1999C7EB-3496-4E48-A4DA-BEC8160ACAA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Core", "Libraries\Nop.Core\Nop.Core.csproj", "{480842CE-35FC-40B6-8FFA-B38FE768CABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Data", "Libraries\Nop.Data\Nop.Data.csproj", "{4888D8C9-D156-4C31-BE39-1C3F76305006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Services", "Libraries\Nop.Services\Nop.Services.csproj", "{C7617997-A340-4388-9835-5E11C4E60912}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{D2478508-5B82-4426-A0CF-AA02F421E087}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{83FBB80C-D5A0-44EF-8A71-4EBC96240393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Web.Framework", "Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj", "{064D4229-79B3-4A80-BBFE-E89A5A1BFDA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Web", "Presentation\Nop.Web\Nop.Web.csproj", "{B55CBC99-7615-4509-9BCD-2272948B96A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Plugin.Widgets.GoogleAnalytics", "Plugins\Nop.Plugin.Widgets.GoogleAnalytics\Nop.Plugin.Widgets.GoogleAnalytics.csproj", "{74391B4A-2EB6-4A25-A229-4B72522D2C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Plugin.Widgets.NivoSlider", "Plugins\Nop.Plugin.Widgets.NivoSlider\Nop.Plugin.Widgets.NivoSlider.csproj", "{8E93868B-E7A2-4119-B13A-918B5886D859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nop.Admin", "Presentation\Nop.Web\Administration\Nop.Admin.csproj", "{BCFA9A36-20AF-483F-B52E-EAFD90561D03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{480842CE-35FC-40B6-8FFA-B38FE768CABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480842CE-35FC-40B6-8FFA-B38FE768CABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480842CE-35FC-40B6-8FFA-B38FE768CABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4888D8C9-D156-4C31-BE39-1C3F76305006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4888D8C9-D156-4C31-BE39-1C3F76305006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4888D8C9-D156-4C31-BE39-1C3F76305006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7617997-A340-4388-9835-5E11C4E60912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7617997-A340-4388-9835-5E11C4E60912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7617997-A340-4388-9835-5E11C4E60912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{064D4229-79B3-4A80-BBFE-E89A5A1BFDA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{064D4229-79B3-4A80-BBFE-E89A5A1BFDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{064D4229-79B3-4A80-BBFE-E89A5A1BFDA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B55CBC99-7615-4509-9BCD-2272948B96A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55CBC99-7615-4509-9BCD-2272948B96A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55CBC99-7615-4509-9BCD-2272948B96A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55CBC99-7615-4509-9BCD-2272948B96A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74391B4A-2EB6-4A25-A229-4B72522D2C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74391B4A-2EB6-4A25-A229-4B72522D2C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74391B4A-2EB6-4A25-A229-4B72522D2C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E93868B-E7A2-4119-B13A-918B5886D859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E93868B-E7A2-4119-B13A-918B5886D859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E93868B-E7A2-4119-B13A-918B5886D859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFA9A36-20AF-483F-B52E-EAFD90561D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFA9A36-20AF-483F-B52E-EAFD90561D03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFA9A36-20AF-483F-B52E-EAFD90561D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFA9A36-20AF-483F-B52E-EAFD90561D03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{480842CE-35FC-40B6-8FFA-B38FE768CABA} = {1999C7EB-3496-4E48-A4DA-BEC8160ACAA7}
+		{4888D8C9-D156-4C31-BE39-1C3F76305006} = {1999C7EB-3496-4E48-A4DA-BEC8160ACAA7}
+		{C7617997-A340-4388-9835-5E11C4E60912} = {1999C7EB-3496-4E48-A4DA-BEC8160ACAA7}
+		{74391B4A-2EB6-4A25-A229-4B72522D2C4B} = {D2478508-5B82-4426-A0CF-AA02F421E087}
+		{8E93868B-E7A2-4119-B13A-918B5886D859} = {D2478508-5B82-4426-A0CF-AA02F421E087}
+		{064D4229-79B3-4A80-BBFE-E89A5A1BFDA8} = {83FBB80C-D5A0-44EF-8A71-4EBC96240393}
+		{B55CBC99-7615-4509-9BCD-2272948B96A7} = {83FBB80C-D5A0-44EF-8A71-4EBC96240393}
+		{BCFA9A36-20AF-483F-B52E-EAFD90561D03} = {83FBB80C-D5A0-44EF-8A71-4EBC96240393}
+	EndGlobalSection
+EndGlobal
