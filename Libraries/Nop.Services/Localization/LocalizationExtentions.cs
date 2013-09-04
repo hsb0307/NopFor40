@@ -31,8 +31,8 @@ namespace Nop.Services.Localization
         /// <param name="entity">Entity</param>
         /// <param name="keySelector">Key selector</param>
         /// <param name="languageId">Language identifier</param>
-        /// <param name="returnDefaultValue">A value indicating whether to return default value (if localized is not found)</param>
-        /// <param name="ensureTwoPublishedLanguages">A value indicating whether to ensure that we have at least two published languages; otherwise, load only default value</param>
+        /// <param name="returnDefaultValue">是否返回一个默认值A value indicating whether to return default value (if localized is not found)</param>
+        /// <param name="ensureTwoPublishedLanguages">确保发布了两中以上语言A value indicating whether to ensure that we have at least two published languages; otherwise, load only default value</param>
         /// <returns>Localized property</returns>
         public static string GetLocalized<T>(this T entity, 
             Expression<Func<T, string>> keySelector, int languageId, 
@@ -103,10 +103,11 @@ namespace Nop.Services.Localization
                         result = CommonHelper.To<TPropType>(resultStr);
                 }
             }
-
+            // 如果没有得到本地化字符串，并且需要返回一个默认值
             //set default value if required
             if (String.IsNullOrEmpty(resultStr) && returnDefaultValue)
             {
+                // 相当于直接返回实体对象的该属性的值
                 var localizer = keySelector.Compile();
                 result = localizer(entity);
             }
