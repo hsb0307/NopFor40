@@ -31,7 +31,7 @@
 
             // Register buttons
             ed.addButton('netadvimage', {
-                title: 'Insert/Edit Image',
+                title: 'Insert/Edit Image\u63d2\u5165\u7f16\u8f91\u56fe\u7247',
                 cmd: 'mceNetAdvImage',
                 image: url + '/img/tinymce-insertimage.png'
             });

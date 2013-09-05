@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Insert Image</title>
+    <title>插入图片</title>
     <script type="text/javascript" src="@Url.Content("~/Content/editors/tinymce/tiny_mce_popup.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Content/editors/tinymce/utils/mctabs.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Content/editors/tinymce/utils/form_utils.js")"></script>
@@ -35,9 +35,9 @@
     <form id="mce" onsubmit="ImageDialog.insert();return false;" action="#">
     <div class="tabs">
         <ul>
-            <li id="upload_tab" class="current"><span><a href="javascript:mcTabs.displayTab('upload_tab','upload_panel');" onmousedown="return false;">Upload</a></span></li>
-            <li id="general_tab"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">General</a></span></li>
-            <li id="advanced_tab"><span><a href="javascript:mcTabs.displayTab('advanced_tab','advanced_panel');" onmousedown="return false;">Advanced</a></span></li>
+            <li id="upload_tab" class="current"><span><a href="javascript:mcTabs.displayTab('upload_tab','upload_panel');" onmousedown="return false;">上传</a></span></li>
+            <li id="general_tab"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">基本</a></span></li>
+            <li id="advanced_tab"><span><a href="javascript:mcTabs.displayTab('advanced_tab','advanced_panel');" onmousedown="return false;">高级</a></span></li>
         </ul>
     </div>
     <div class="panel_wrapper">
@@ -46,7 +46,7 @@
                 <ul id="img-list">
                 </ul>
                 <div id="img-upload">
-                    <p>Upload new image</p>
+                    <p>上传一幅新图片</p>
                     <div id="upload">
                         &nbsp;</div>
                     @*<p>or, link to an <a class="img-ext" href="#">external image.</a></p>*@

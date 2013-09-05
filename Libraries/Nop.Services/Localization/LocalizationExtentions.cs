@@ -32,7 +32,7 @@ namespace Nop.Services.Localization
         /// <param name="keySelector">Key selector</param>
         /// <param name="languageId">Language identifier</param>
         /// <param name="returnDefaultValue">是否返回一个默认值A value indicating whether to return default value (if localized is not found)</param>
-        /// <param name="ensureTwoPublishedLanguages">确保发布了两中以上语言A value indicating whether to ensure that we have at least two published languages; otherwise, load only default value</param>
+        /// <param name="ensureTwoPublishedLanguages">确保发布了两种以上语言A value indicating whether to ensure that we have at least two published languages; otherwise, load only default value</param>
         /// <returns>Localized property</returns>
         public static string GetLocalized<T>(this T entity, 
             Expression<Func<T, string>> keySelector, int languageId, 
@@ -85,6 +85,7 @@ namespace Nop.Services.Localization
 
             if (languageId > 0)
             {
+                // 确保至少发布了两种以上语言
                 //ensure that we have at least two published languages
                 bool loadLocalizedValue = true;
                 if (ensureTwoPublishedLanguages)
@@ -94,6 +95,7 @@ namespace Nop.Services.Localization
                     loadLocalizedValue = totalPublishedLanguages >= 2;
                 }
 
+                // 发布了了两种以上语言，就可以从 LocalizedProperty 表中取实体对象的本地化的字符串
                 //localized value
                 if (loadLocalizedValue)
                 {
