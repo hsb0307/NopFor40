@@ -257,7 +257,7 @@ namespace Nop.Web.Controllers
                         case ProductType.GroupedProduct:
                             {
                                 #region Grouped product
-
+                                // 
                                 var associatedProducts = _productService.SearchProducts(
                                     storeId: _storeContext.CurrentStore.Id,
                                     visibleIndividuallyOnly: false,
@@ -292,6 +292,7 @@ namespace Nop.Web.Controllers
                                                     //calculate for the maximum quantity (in case if we have tier prices)
                                                     var tmpPrice = _priceCalculationService.GetFinalPrice(associatedProduct,
                                                         _workContext.CurrentCustomer, decimal.Zero, true, int.MaxValue);
+
                                                     if (!minPossiblePrice.HasValue || tmpPrice < minPossiblePrice.Value)
                                                     {
                                                         minPriceProduct = associatedProduct;
