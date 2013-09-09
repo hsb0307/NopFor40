@@ -98,6 +98,23 @@ namespace Nop.Services.Stores
                 var stores = query.ToList();
                 return stores;
             });
+            //try
+            //{
+            //    return _cacheManager.Get(key, () =>
+            //    {
+            //        var query = from s in _storeRepository.Table
+            //                    orderby s.DisplayOrder, s.Name
+            //                    select s;
+            //        var stores = query.ToList();
+            //        return stores;
+            //    });
+            //}
+            //catch(Exception ex)
+            //{
+            //    var ex1 = ex.InnerException;
+
+            //}
+            //return null;
         }
 
         /// <summary>

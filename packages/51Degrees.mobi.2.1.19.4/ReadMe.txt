@@ -1,4 +1,4 @@
-51Degrees.mobi is supported by a “freemium?business model. All device
+51Degrees.mobi is supported by a “freemium” business model. All device
 detection and redirection source code is licenced under the Mozilla
 Public Licence 2 (MPL2) allowing free commercial use.
 

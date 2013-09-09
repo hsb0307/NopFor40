@@ -13,6 +13,7 @@ namespace Nop.Data.Mapping.Stores
             this.Property(s => s.Url).IsRequired().HasMaxLength(400);
             this.Property(s => s.SecureUrl).HasMaxLength(400);
             this.Property(s => s.Hosts).HasMaxLength(1000);
+            //this.Property(s => s.Discription).IsOptional();
         }
     }
 }

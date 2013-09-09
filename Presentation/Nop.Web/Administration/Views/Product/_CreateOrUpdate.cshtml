@@ -35,6 +35,10 @@
 {
     @Html.Partial("_CreateOrUpdate.SEO", Model)
 }
+@helper TabPictures()
+{
+    @Html.Partial("_CreateOrUpdate.Pictures", Model)
+}
 @helper TabCategories()
 {
     @Html.Partial("_CreateOrUpdate.Categories", Model)
@@ -43,35 +47,33 @@
 {
     @Html.Partial("_CreateOrUpdate.Manufacturers", Model)
 }
-@helper TabPictures()
-{
-    @Html.Partial("_CreateOrUpdate.Pictures", Model)
-}
+
 @helper TabSpecificationAttributes()
 {
     @Html.Partial("_CreateOrUpdate.SpecificationAttributes", Model)
-}
-@helper TabAcl()
-{
-    @Html.Partial("_CreateOrUpdate.Acl", Model)
-}
-@helper TabStores()
-{
-    @Html.Partial("_CreateOrUpdate.Stores", Model)
-}
-
-@helper TabTierPrices()
-{
-    @Html.Partial("_CreateOrUpdate.TierPrices", Model)
 }
 @helper TabProductAttributes()
 {
     @Html.Partial("_CreateOrUpdate.ProductAttributes", Model)
 }
+@helper TabTierPrices()
+{
+    @Html.Partial("_CreateOrUpdate.TierPrices", Model)
+}
 @helper TabDiscounts()
 {
     @Html.Partial("_CreateOrUpdate.Discounts", Model)
 }
+@helper TabAcl()
+{
+    @Html.Partial("_CreateOrUpdate.Acl", Model)
+}
+
+@helper TabStores()
+{
+    @Html.Partial("_CreateOrUpdate.Stores", Model)
+}
+
 @helper TabRelatedProducts()
 {
     @Html.Partial("_CreateOrUpdate.RelatedProducts", Model)

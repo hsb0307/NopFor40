@@ -660,7 +660,9 @@ namespace Nop.Web.Infrastructure
                             new { controller = "Common", action = "PageNotFound" },
                             new[] { "Nop.Web.Controllers" });
         }
-
+        /// <summary>
+        /// 注册路由时，注册路由的顺序很重要，这个优先级属性用来在 一定程度上（不同IRouteProvider之间）调整 注册路由的顺序。
+        /// </summary>
         public int Priority
         {
             get

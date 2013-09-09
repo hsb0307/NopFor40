@@ -35,5 +35,13 @@ namespace Nop.Core.Domain.Stores
         /// Gets or sets the display order
         /// </summary>
         public int DisplayOrder { get; set; }
+
+        /// <summary>
+        /// ÃèÊö
+        /// </summary>
+        public string Discription { get; set; }
+        
+
+
     }
 }
