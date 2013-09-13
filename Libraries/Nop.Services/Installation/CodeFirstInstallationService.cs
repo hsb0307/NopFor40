@@ -9572,6 +9572,12 @@ namespace Nop.Services.Installation
                                            ViewPath = "CategoryTemplate.ProductsInGridOrLines",
                                            DisplayOrder = 1
                                        },
+                                    new CategoryTemplate
+                                    {
+                                        Name = "类表格式2",
+                                        ViewPath = "CategoryTemplate.ProductsInGridOrLines",
+                                        DisplayOrder = 2
+                                    }
                                };
             categoryTemplates.ForEach(ct => _categoryTemplateRepository.Insert(ct));
 

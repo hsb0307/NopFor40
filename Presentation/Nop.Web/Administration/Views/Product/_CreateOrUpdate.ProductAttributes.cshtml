@@ -114,7 +114,7 @@ else
                     columns.Bound(x => x.AttributesXml)
                         .ClientTemplate("<#= AttributesXml #><br /><span style=\"color: red\"><#= Warnings #></span>")
                         .Encoded(false)
-                        .ReadOnly();
+                        .ReadOnly().Width(240);
                     columns.Bound(x => x.StockQuantity1)
                         .Centered();
                     columns.Bound(x => x.AllowOutOfStockOrders1)
@@ -136,7 +136,7 @@ else
                         commands.Edit().Text(T("Admin.Common.Edit").Text);
                         commands.Delete().Text(T("Admin.Common.Delete").Text);
                     })
-                    .Width(180);
+                    .Width(186);
                 })
                 .EnableCustomBinding(true))
     </div>

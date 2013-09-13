@@ -89,18 +89,41 @@ namespace Nop.Web.Framework
             builder.RegisterControllers(typeFinder.GetAssemblies().ToArray());
 
             //data layer
-            var dataSettingsManager = new DataSettingsManager();
-            var dataProviderSettings = dataSettingsManager.LoadSettings();
-            builder.Register(c => dataSettingsManager.LoadSettings()).As<DataSettings>();
-            builder.Register(x => new EfDataProviderManager(x.Resolve<DataSettings>())).As<BaseDataProviderManager>().InstancePerDependency();
+            //var dataSettingsManager = new DataSettingsManager();
+            //var dataProviderSettings = dataSettingsManager.LoadSettings();
+            //builder.Register(c => dataSettingsManager.LoadSettings()).As<DataSettings>();
+            //builder.Register(x => new EfDataProviderManager(x.Resolve<DataSettings>())).As<BaseDataProviderManager>().InstancePerDependency();
 
 
-            builder.Register(x => (IEfDataProvider)x.Resolve<BaseDataProviderManager>().LoadDataProvider()).As<IDataProvider>().InstancePerDependency();
-            builder.Register(x => (IEfDataProvider)x.Resolve<BaseDataProviderManager>().LoadDataProvider()).As<IEfDataProvider>().InstancePerDependency();
+            //builder.Register(x => (IEfDataProvider)x.Resolve<BaseDataProviderManager>().LoadDataProvider()).As<IDataProvider>().InstancePerDependency();
+            //builder.Register(x => (IEfDataProvider)x.Resolve<BaseDataProviderManager>().LoadDataProvider()).As<IEfDataProvider>().InstancePerDependency();
+
+            //if (dataProviderSettings != null && dataProviderSettings.IsValid())
+            //{
+            //    var efDataProviderManager = new EfDataProviderManager(dataSettingsManager.LoadSettings());
+            //    var dataProvider = (IEfDataProvider)efDataProviderManager.LoadDataProvider();
+            //    dataProvider.InitConnectionFactory();
+
+            //    builder.Register<IDbContext>(c => new NopObjectContext(dataProviderSettings.DataConnectionString)).InstancePerHttpRequest();
+            //}
+            //else
+            //{
+            //    builder.Register<IDbContext>(c => new NopObjectContext(dataSettingsManager.LoadSettings().DataConnectionString)).InstancePerHttpRequest();
+            //}
+
+            DataSettingsManager dataSettingsManager = new DataSettingsManager();
+            DataSettings dataProviderSettings = dataSettingsManager.LoadSettings();
+            EfDataProviderManager efDataProviderManager = new EfDataProviderManager(dataProviderSettings);
+
+            builder.Register(c => dataProviderSettings).As<DataSettings>();
+            builder.Register(x => new EfDataProviderManager(dataProviderSettings)).As<BaseDataProviderManager>().InstancePerDependency();
+
+            builder.Register(x => (IEfDataProvider)efDataProviderManager.LoadDataProvider()).As<IDataProvider>().InstancePerDependency();
+            builder.Register(x => (IEfDataProvider)efDataProviderManager.LoadDataProvider()).As<IEfDataProvider>().InstancePerDependency();
 
             if (dataProviderSettings != null && dataProviderSettings.IsValid())
             {
-                var efDataProviderManager = new EfDataProviderManager(dataSettingsManager.LoadSettings());
+                //var efDataProviderManager = new EfDataProviderManager(dataSettingsManager.LoadSettings());
                 var dataProvider = (IEfDataProvider)efDataProviderManager.LoadDataProvider();
                 dataProvider.InitConnectionFactory();
 
@@ -340,7 +363,7 @@ namespace Nop.Web.Framework
                 {
                     var currentStoreId = c.Resolve<IStoreContext>().CurrentStore.Id;
                     //uncomment the code below if you want load settings per store only when you have two stores installed.
-                    //var currentStoreId = c.Resolve<IStoreService>().GetAllStores().Count > 1
+                    //var currentStoreId = c.Resolve<IStoreService>().GetAllStores().Count > 1 ?
                     //    c.Resolve<IStoreContext>().CurrentStore.Id : 0;
 
                     //although it's better to connect to your database and execute the following SQL:

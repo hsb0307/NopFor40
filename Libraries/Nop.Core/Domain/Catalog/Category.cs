@@ -16,7 +16,7 @@ namespace Nop.Core.Domain.Catalog
         private ICollection<Discount> _appliedDiscounts;
 
         /// <summary>
-        /// Gets or sets the name
+        /// Gets or sets the name类别名称
         /// </summary>
         public string Name { get; set; }
 
@@ -26,47 +26,46 @@ namespace Nop.Core.Domain.Catalog
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or sets a value of used category template identifier
+        /// Gets or sets a value of used category template identifier类别模版编号
         /// </summary>
         public int CategoryTemplateId { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta keywords
+        /// Gets or sets the meta keywords标签关键字
         /// </summary>
         public string MetaKeywords { get; set; }
-
         /// <summary>
-        /// Gets or sets the meta description
+        /// Gets or sets the meta description标签描述
         /// </summary>
         public string MetaDescription { get; set; }
 
         /// <summary>
-        /// Gets or sets the meta title
+        /// Gets or sets the meta title标签标题
         /// </summary>
         public string MetaTitle { get; set; }
 
         /// <summary>
-        /// Gets or sets the parent category identifier
+        /// Gets or sets the parent category identifier父级编号
         /// </summary>
         public int ParentCategoryId { get; set; }
 
         /// <summary>
-        /// Gets or sets the picture identifier
+        /// Gets or sets the picture identifier图片编号
         /// </summary>
         public int PictureId { get; set; }
 
         /// <summary>
-        /// Gets or sets the page size
+        /// Gets or sets the page size总页数
         /// </summary>
         public int PageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether customers can select the page size
+        /// Gets or sets a value indicating whether customers can select the page size是否允许客户分页
         /// </summary>
         public bool AllowCustomersToSelectPageSize { get; set; }
 
         /// <summary>
-        /// Gets or sets the available customer selectable page size options
+        /// Gets or sets the available customer selectable page size options分页设置
         /// </summary>
         public string PageSizeOptions { get; set; }
 
@@ -76,12 +75,12 @@ namespace Nop.Core.Domain.Catalog
         public string PriceRanges { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether to show the category on home page
+        /// 是否显示首页Gets or sets a value indicating whether to show the category on home page
         /// </summary>
         public bool ShowOnHomePage { get; set; }
-
+        
         /// <summary>
-        /// Gets or sets a value indicating whether this category has discounts applied
+        /// 是否启用打折Gets or sets a value indicating whether this category has discounts applied
         /// <remarks>The same as if we run category.AppliedDiscounts.Count > 0
         /// We use this property for performance optimization:
         /// if this property is set to false, then we do not need to load Applied Discounts navifation property
