@@ -157,6 +157,7 @@ namespace Nop.Web.Infrastructure
                             new { productId = @"\d+", shoppingCartTypeId = @"\d+", quantity = @"\d+" },
                             new[] { "Nop.Web.Controllers" });
             //add product to cart (with attributes and options). used on the product details pages.
+            // 从商品详细信息页面（PC网页版）添加商品到购物车或者收藏夹
             routes.MapLocalizedRoute("AddProductToCart-Details",
                             "addproducttocart/details/{productId}/{shoppingCartTypeId}",
                             new { controller = "ShoppingCart", action = "AddProductToCart_Details" },

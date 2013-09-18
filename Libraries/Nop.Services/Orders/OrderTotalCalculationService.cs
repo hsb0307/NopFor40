@@ -338,9 +338,6 @@ namespace Nop.Services.Orders
         }
 
 
-
-
-
         /// <summary>
         /// Gets shopping cart additional shipping charge
         /// </summary>
@@ -449,6 +446,7 @@ namespace Nop.Services.Orders
         }
 
         /// <summary>
+        /// 购物车运费合计
         /// Gets shopping cart shipping total
         /// </summary>
         /// <param name="cart">Cart</param>
@@ -495,6 +493,7 @@ namespace Nop.Services.Orders
         }
 
         /// <summary>
+        /// ///购物车运费合计
         /// Gets shopping cart shipping total
         /// </summary>
         /// <param name="cart">Cart</param>
@@ -512,6 +511,7 @@ namespace Nop.Services.Orders
 
             var customer = cart.GetCustomer();
 
+            // 是否免运费
             bool isFreeShipping = IsFreeShipping(cart);
             if (isFreeShipping)
                 return decimal.Zero;
@@ -612,10 +612,6 @@ namespace Nop.Services.Orders
             return shippingDiscountAmount;
         }
         
-
-
-
-
 
         /// <summary>
         /// Gets tax
@@ -747,9 +743,6 @@ namespace Nop.Services.Orders
                 taxTotal = Math.Round(taxTotal, 2);
             return taxTotal;
         }
-
-
-
 
 
         /// <summary>
@@ -995,9 +988,6 @@ namespace Nop.Services.Orders
 
             return discountAmount;
         }
-
-
-
 
 
         /// <summary>

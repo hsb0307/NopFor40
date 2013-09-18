@@ -6,11 +6,13 @@ namespace Nop.Core.Domain.Common
     public class Address : BaseEntity, ICloneable
     {
         /// <summary>
+        /// 名
         /// Gets or sets the first name
         /// </summary>
         public string FirstName { get; set; }
 
         /// <summary>
+        /// 姓
         /// Gets or sets the last name
         /// </summary>
         public string LastName { get; set; }

@@ -1,2 +1,5 @@
 Widgets.GoogleAnalytics
 Widgets.NivoSlider
+Shipping.FixedRate
+Payments.AliPay
+Payments.Chinabank

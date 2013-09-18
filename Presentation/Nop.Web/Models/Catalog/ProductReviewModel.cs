@@ -11,13 +11,25 @@ namespace Nop.Web.Models.Catalog
     {
         public int ProductId { get; set; }
 
+        /// <summary>
+        /// 评价积分
+        /// </summary>
         public int RatingSum { get; set; }
 
+        /// <summary>
+        /// 总的评论数
+        /// </summary>
         public int TotalReviews { get; set; }
 
+        /// <summary>
+        /// 允许会员评论
+        /// </summary>
         public bool AllowCustomerReviews { get; set; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     [Validator(typeof(ProductReviewsValidator))]
     public partial class ProductReviewsModel : BaseNopModel
     {
@@ -42,12 +54,24 @@ namespace Nop.Web.Models.Catalog
 
         public string CustomerName { get; set; }
 
+        /// <summary>
+        /// 允许查看用户信息
+        /// </summary>
         public bool AllowViewingProfiles { get; set; }
         
+        /// <summary>
+        /// 评论标题
+        /// </summary>
         public string Title { get; set; }
 
+        /// <summary>
+        /// 评论内容
+        /// </summary>
         public string ReviewText { get; set; }
 
+        /// <summary>
+        /// 评价得分
+        /// </summary>
         public int Rating { get; set; }
 
         public ProductReviewHelpfulnessModel Helpfulness { get; set; }

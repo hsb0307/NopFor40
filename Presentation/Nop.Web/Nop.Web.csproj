@@ -588,6 +588,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\3.1_Chinese%28Simplified%29.xml" />
+    <Content Include="App_Data\data.txt" />
     <Content Include="App_Data\Settings.txt" />
     <Content Include="Content\2013.2.611\Black\editor.png" />
     <Content Include="Content\2013.2.611\Black\imagebrowser.png" />

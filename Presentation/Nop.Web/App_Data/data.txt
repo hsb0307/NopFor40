@@ -1,0 +1,39 @@
+﻿
+
+定义插件的步骤：
+1、为插件取一个合适的名字，并确定其系统名称，新建一个类库。
+Shipping.FixedRateShipping
+
+2、修改项目的属性，输出路径为：
+..\..\Presentation\Nop.Web\Plugins\插件系统名称\
+..\..\Presentation\Nop.Web\Plugins\Widgets.NivoSlider\
+..\..\Presentation\Nop.Web\Plugins\Shipping.FixedRate\
+
+..\..\Presentation\Nop.Web\Plugins\Payments.Chinabank\
+..\..\Presentation\Nop.Web\Plugins\Payments.AliPay\
+
+3、添加插件需要的Controller、Models和View
+
+4、添加插件的设置类，继承自ISettings
+如AliPayPaymentSettings : ISettings
+
+5、添加一个插件的功能实现类，继承自BasePlugin，有选择的实现下列插件功能接口
+AliPayPaymentProcessor : BasePlugin, IPaymentMethod
+
+IExternalAuthenticationMethod. Used for creating external authentication methods such as Facebook, Twitter, OpenID, etc.
+IWidgetPlugin. It allows you to create widgets. Widgets are rendered on some parts of your site. For example, it can be a "Live chat" block on the left column of your site.
+IExchangeRateProvider. Used for getting currency exchange rate.
+IDiscountRequirementRule. Allows you to create new discount rules such as "Billing country of a customer should be…"
+IPaymentMethod. Plugins which are used for payment processing.
+IShippingRateComputationMethod. These plugins are used for retrieving accepted delivery methods and appropriate shipping rates. For example, UPS, UPS, FedEx, etc.
+ITaxProvider. Tax providers are used for getting tax rates.
+If your plugin doesn't fit any of these interfaces, then use the "IMiscPlugin" interface.
+
+
+RoutePublisher(IRoutePublisher) 是Facade接口，引用代码都是用这个类来实现路由的注册, RoutePublisher调用IRouteProvider来完成路由注册，真正注册是有IRouteProvider完成。
+IRouteProvider:
+\Presentation\Nop.Web\Infrastructure\GenericUrlRouteProvider.cs - (19, 20) : routes.MapGenericPathRoute("Product",
+\Presentation\Nop.Web\Infrastructure\RouteProvider.cs - (8, 42) : public partial class RouteProvider : IRouteProvider
+
+路由匹配时，所有路由均进行匹配与路由类型无关。
+

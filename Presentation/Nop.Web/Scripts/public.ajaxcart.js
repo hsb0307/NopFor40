@@ -41,6 +41,9 @@ var AjaxCart = {
     },
 
     //add a product to the cart/wishlist from the product details page (desktop version)
+    // 从商品详细信息页面（PC网页版）添加商品到购物车或者收藏夹 添加
+    // url具体例子， urladd: /addproducttocart/details/15/1
+    // form的Id， formselector : #product-details-form
     addproducttocart_details: function (urladd, formselector) {
         if (this.loadWaiting != false) {
             return;

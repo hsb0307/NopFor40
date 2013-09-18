@@ -1,4 +1,4 @@
-﻿Group: Widgets
+Group: Widgets
 FriendlyName: Google Analytics
 SystemName: Widgets.GoogleAnalytics
 Version: 1.14

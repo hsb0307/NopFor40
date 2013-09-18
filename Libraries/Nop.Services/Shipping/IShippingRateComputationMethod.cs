@@ -5,16 +5,19 @@ using Nop.Services.Shipping.Tracking;
 namespace Nop.Services.Shipping
 {
     /// <summary>
+    /// 运费计算方法的接口
     /// Provides an interface of shipping rate computation method
     /// </summary>
     public partial interface IShippingRateComputationMethod : IPlugin
     {
         /// <summary>
+        /// 运费计算类型，实时计算还是固定的
         /// Gets a shipping rate computation method type
         /// </summary>
         ShippingRateComputationMethodType ShippingRateComputationMethodType { get; }
 
         /// <summary>
+        /// 获取送货参数
         ///  Gets available shipping options
         /// </summary>
         /// <param name="getShippingOptionRequest">A request for getting shipping options</param>
@@ -22,6 +25,7 @@ namespace Nop.Services.Shipping
         GetShippingOptionResponse GetShippingOptions(GetShippingOptionRequest getShippingOptionRequest);
 
         /// <summary>
+        /// 获取固定的运费率（如果运费的计算方法允许，结帐前比率可以计算）。
         /// Gets fixed shipping rate (if shipping rate computation method allows it and the rate can be calculated before checkout).
         /// </summary>
         /// <param name="getShippingOptionRequest">A request for getting shipping options</param>

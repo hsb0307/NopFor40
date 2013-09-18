@@ -14,11 +14,13 @@ namespace Nop.Core.Domain.Shipping
     public partial class ShippingOption
     {
         /// <summary>
+        /// 运费计算方法插件的SystemName
         /// Gets or sets the system name of shipping rate computation method
         /// </summary>
         public string ShippingRateComputationMethodSystemName { get; set; }
 
         /// <summary>
+        /// 运费（无折扣，额外的运费）
         /// Gets or sets a shipping rate (without discounts, additional shipping charges, etc)
         /// </summary>
         public decimal Rate { get; set; }

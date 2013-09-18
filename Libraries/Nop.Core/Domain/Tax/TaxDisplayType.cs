@@ -7,11 +7,11 @@ namespace Nop.Core.Domain.Tax
     public enum TaxDisplayType
     {
         /// <summary>
-        /// Including tax
+        /// º¬Ë° Including tax
         /// </summary>
         IncludingTax = 0,
         /// <summary>
-        /// Excluding tax
+        /// ²»º¬Ë° Excluding tax
         /// </summary>
         ExcludingTax = 10,
     }

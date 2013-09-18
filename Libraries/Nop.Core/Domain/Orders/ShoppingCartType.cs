@@ -7,10 +7,12 @@ namespace Nop.Core.Domain.Orders
     public enum ShoppingCartType
     {
         /// <summary>
+        /// π∫ŒÔ≥µ
         /// Shopping cart
         /// </summary>
         ShoppingCart = 1,
         /// <summary>
+        ///  ’≤ÿº–
         /// Wishlist
         /// </summary>
         Wishlist = 2,
