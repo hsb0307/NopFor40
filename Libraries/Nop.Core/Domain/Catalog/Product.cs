@@ -168,6 +168,7 @@ namespace Nop.Core.Domain.Catalog
         public bool AutomaticallyAddRequiredProducts { get; set; }
 
         /// <summary>
+        /// 是否是可下载商品
         /// Gets or sets a value indicating whether the product is download
         /// </summary>
         public bool IsDownload { get; set; }
